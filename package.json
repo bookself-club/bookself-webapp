@@ -2,22 +2,34 @@
   "name": "bookself-webapp",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts-ts": "2.17.0"
-  },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "precommit": "pretty-quick --staged"
   },
+  "dependencies": {
+    "formik": "^1.0.2",
+    "jwt-decode": "^2.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "react-intl": "^2.4.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts-ts": "2.17.0",
+    "styled-components": "^3.4.1",
+    "yup": "^0.26.0"
+  },
   "devDependencies": {
     "@types/jest": "^23.3.1",
+    "@types/jwt-decode": "^2.2.1",
     "@types/node": "^10.5.6",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
+    "@types/react-helmet": "^5.0.7",
+    "@types/react-intl": "^2.3.9",
+    "@types/react-router-dom": "^4.3.0",
+    "@types/yup": "^0.24.7",
     "husky": "^0.14.3",
     "prettier": "1.14.0",
     "pretty-quick": "^1.6.0",
