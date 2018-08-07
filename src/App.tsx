@@ -1,16 +1,32 @@
-import * as React from 'react';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Helmet from 'react-helmet';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import PrivateRoute from 'components/PrivateRoute';
+import PublicRoute from 'components/PublicRoute';
+
+import LoginPage from 'components/pages/LoginPage';
+import HomePage from 'components/pages/HomePage';
+
+const title = 'Bookself';
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <ThemeProvider theme={{ mode: 'dark' }}>
+        <Router>
+          <div>
+            <Helmet titleTemplate={`%s - ${title}`} />
+            <Switch>
+              <Route exact={true} path="/" component={HomePage} />
+              <PublicRoute path="/login" component={LoginPage} />
+              <PrivateRoute path="/user-area" component={LoginPage} />
+              <Route render={() => <h2>No match!</h2>} />
+            </Switch>
+          </div>
+        </Router>
+      </ThemeProvider>
     );
   }
 }
