@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { colors, fonts } from 'components/tokens';
+import { colors, fonts, misc } from 'components/tokens';
 
 interface IProps {
   id: string;
@@ -20,12 +20,6 @@ interface IStyledProps {
   value?: string | number;
   error?: string;
   disabled?: boolean;
-}
-
-interface ILabelProps {
-  disabled?: boolean;
-  error?: string;
-  htmlFor?: string;
 }
 
 const TextField: React.SFC<IProps> = ({
@@ -67,32 +61,31 @@ const Group = styled.div`
 const Label = styled.label`
   color: ${colors.text.grayLight};
   display: block;
-  font-size: ${fonts.size.regular};
+  font-size: ${fonts.size.small};
   font-weight: ${fonts.weight.regular};
-  padding: 4px 8px;
-  background-color: ${(props: ILabelProps) =>
-    props.disabled ? colors.fill.grayLight : 'transparent'};
+  padding: 0 8px;
   margin-bottom: 8px;
 `;
 
 const StyledInput = styled.input`
   background: none;
   background-color: ${(props: IStyledProps) =>
-    props.disabled ? colors.fill.grayLight : 'transparent'};
-  color: ${colors.text.grayDark};
-  font-size: ${fonts.size.regular};
-  padding: 8px;
+    props.disabled ? colors.fill.grayLight : colors.fill.grayMedium};
+  color: ${colors.text.white};
+  font-size: ${fonts.size.small};
+  padding: 0 8px;
   display: block;
   width: 100%;
-  border: none;
-  border-radius: 0;
-  border: 1px solid ${colors.fill.blue};
+  border-radius: ${misc.radius};
+  border: 1px solid ${colors.fill.grayDark};
   cursor: ${(props: IStyledProps) =>
     props.disabled ? 'not-allowed' : 'pointer'};
+  font-weight: ${fonts.weight.regular};
+  height: 44px;
 
   &::placeholder {
     color: ${colors.text.grayLight};
-    opacity: 0.8;
+    opacity: 0;
   }
 
   & ~ .error {
@@ -104,6 +97,7 @@ const StyledInput = styled.input`
   &:focus {
     outline: none;
     color: ${colors.text.blue};
+    border-color: ${colors.fill.blue};
   }
 
   ${(props: IStyledProps) => {
