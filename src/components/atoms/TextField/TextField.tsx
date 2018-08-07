@@ -77,7 +77,7 @@ const StyledInput = styled.input`
   display: block;
   width: 100%;
   border-radius: ${misc.radius};
-  border: 1px solid ${colors.fill.grayDark};
+  border: 1px solid ${colors.fill.grayDarker};
   cursor: ${(props: IStyledProps) =>
     props.disabled ? 'not-allowed' : 'pointer'};
   font-weight: ${fonts.weight.regular};

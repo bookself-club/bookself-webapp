@@ -11,7 +11,7 @@ const Card: React.SFC<IProps> = ({ children, width = '100%' }) => (
 );
 
 const CardWrapper = styled.div`
-  background-color: ${colors.fill.grayMedium};
+  background-color: ${colors.fill.grayDark};
   width: ${(props: IProps) => `${props.width}`};
   padding: 40px;
   border-radius: ${misc.radius};

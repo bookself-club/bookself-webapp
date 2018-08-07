@@ -7,8 +7,9 @@ const redLight = '#ef9a9a';
 const green = '#388E3C';
 const white = '#FFFFFF';
 const gray = '#454545';
-const grayMedium = '#292929';
-const grayDark = '#1E1E1E';
+const grayMedium = '#343434';
+const grayDark = '#292929';
+const grayDarker = '#1E1E1E';
 const grayLight = '#B0BEC5';
 
 export const colors = {
@@ -24,6 +25,7 @@ export const colors = {
     gray,
     grayMedium,
     grayDark,
+    grayDarker,
     grayLight,
   },
   text: {
@@ -38,6 +40,7 @@ export const colors = {
     gray,
     grayMedium,
     grayDark,
+    grayDarker,
     grayLight,
   },
 };
