@@ -38,7 +38,9 @@ const LoginPage: React.SFC<any> = props => (
           }}
           type="password"
         />
-        <Button label="Entrar" />
+        <ButtonWrapper>
+          <Button label="Entrar" />
+        </ButtonWrapper>
       </Card>
     </Wrapper>
   </AuthTemplate>
@@ -49,6 +51,12 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+`;
+
+const ButtonWrapper = styled.div`
+  button {
+    width: 100%;
+  }
 `;
 
 export default LoginPage;
