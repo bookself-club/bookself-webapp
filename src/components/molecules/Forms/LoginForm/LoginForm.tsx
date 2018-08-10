@@ -38,18 +38,6 @@ interface IMyFormValues {
   apiError: string;
 }
 
-interface IResponse {
-  data: {
-    login: {
-      token: string;
-      user: {
-        email: string;
-        name: string;
-      };
-    };
-  };
-}
-
 const LoginForm: React.SFC = () => (
   <LoginMutation mutation={LOGIN}>
     {login => {
@@ -74,8 +62,8 @@ const LoginForm: React.SFC = () => (
                 { setSubmitting, setErrors }
               ) => {
                 login({ variables: { email, password } })
-                  .then((res: IResponse) => {
-                    const { token } = res.data.login;
+                  .then(({ data }: { data: IData }) => {
+                    const { token } = data.login;
                     AuthService.finishAuthentication(token);
                     setSubmitting(false);
                     history.push('/dashboard');
