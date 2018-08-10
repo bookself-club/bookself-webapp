@@ -16,7 +16,7 @@ const PublicRoute: React.SFC<IProps> = ({ component: Component, ...rest }) => (
       !AuthService.isAuthenticated() ? (
         <Component {...rest} {...props} />
       ) : (
-        <Redirect to="/folders/content" />
+        <Redirect to="/dashboard" />
       )
     }
   />
