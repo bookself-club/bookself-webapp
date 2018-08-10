@@ -48,14 +48,15 @@ const TextField: React.SFC<IProps> = ({
       disabled={disabled}
       {...props}
     />
-    {error && <span className="error">{error}</span>}
+    <ErrorWrapper>
+      {error && <ErroLabel error={error}>{error}</ErroLabel>}
+    </ErrorWrapper>
   </Group>
 );
 
 const Group = styled.div`
   position: relative;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 16px;
 `;
 
 const Label = styled.label`
@@ -88,12 +89,6 @@ const StyledInput = styled.input`
     opacity: 0;
   }
 
-  & ~ .error {
-    font-size: ${fonts.size.xsmall};
-    font-weight: ${fonts.weight.semiBold};
-    padding: 0 8px;
-  }
-
   &:focus {
     outline: none;
     color: ${colors.text.blue};
@@ -105,10 +100,26 @@ const StyledInput = styled.input`
       return css`
         color: ${colors.text.red};
         border-color: ${colors.text.red};
+      `;
+    }
+    return '';
+  }};
+`;
 
-        & ~ .error {
-          color: ${colors.text.red};
-        }
+const ErrorWrapper = styled.div`
+  margin-top: 8px;
+  min-height: 20px;
+`;
+
+const ErroLabel = styled.div`
+  font-size: ${fonts.size.xsmall};
+  font-weight: ${fonts.weight.semiBold};
+  padding: 0 8px;
+
+  ${(props: IStyledProps) => {
+    if (props.error) {
+      return css`
+        color: ${colors.text.red};
       `;
     }
     return '';

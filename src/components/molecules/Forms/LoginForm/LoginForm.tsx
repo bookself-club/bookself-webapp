@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import * as yup from 'yup';
 
@@ -112,13 +112,15 @@ const LoginForm: React.SFC = () => (
                     error={touched.password && errors.password}
                   />
 
+                  <Link to="/forgot">Esqueceu sua senha?</Link>
+
                   <ButtonWrapper>
                     <Button
                       type="submit"
                       color="primary"
                       disabled={isSubmitting}
                       loading={isSubmitting}
-                      label="Login"
+                      label="Entrar"
                     />
                   </ButtonWrapper>
                 </Form>
@@ -132,6 +134,7 @@ const LoginForm: React.SFC = () => (
 );
 
 const ButtonWrapper = styled.div`
+  margin-top: 40px;
   button {
     width: 100%;
   }
