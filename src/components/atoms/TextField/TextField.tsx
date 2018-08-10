@@ -104,7 +104,7 @@ const StyledInput = styled.input`
     if (props.error) {
       return css`
         color: ${colors.text.red};
-        border-bottom: 1px solid ${colors.text.red};
+        border-color: ${colors.text.red};
 
         & ~ .error {
           color: ${colors.text.red};
