@@ -8,6 +8,7 @@ import PublicRoute from 'components/PublicRoute';
 
 import LoginPage from 'components/pages/LoginPage';
 import HomePage from 'components/pages/HomePage';
+import DashboardPage from 'components/pages/DashboardPage';
 
 const title = 'Bookself';
 
@@ -21,7 +22,7 @@ class App extends React.Component {
             <Switch>
               <Route exact={true} path="/" component={HomePage} />
               <PublicRoute path="/login" component={LoginPage} />
-              <PrivateRoute path="/user-area" component={LoginPage} />
+              <PrivateRoute path="/dashboard" component={DashboardPage} />
               <Route render={() => <h2>No match!</h2>} />
             </Switch>
           </div>

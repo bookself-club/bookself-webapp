@@ -4,6 +4,7 @@ import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
+import * as yup from 'yup';
 
 import Button from 'components/atoms/Button';
 import TextField from 'components/atoms/TextField';
@@ -61,6 +62,13 @@ const LoginForm: React.SFC = () => (
                 password: '',
                 apiError: '',
               }}
+              validationSchema={yup.object().shape({
+                email: yup
+                  .string()
+                  .email()
+                  .required(),
+                password: yup.string().required(),
+              })}
               onSubmit={(
                 { email, password }: IMyFormValues,
                 { setSubmitting, setErrors }

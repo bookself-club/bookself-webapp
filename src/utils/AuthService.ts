@@ -4,7 +4,6 @@ export default class AuthService {
   public static logout() {
     // Clear user token and profile data from localStorage
     localStorage.removeItem('token');
-    localStorage.removeItem('company');
   }
 
   public static isAuthenticated() {
@@ -18,7 +17,6 @@ export default class AuthService {
 
   public static finishAuthentication(token: string) {
     localStorage.setItem('token', token);
-    localStorage.setItem('company', '');
   }
 
   public static decode() {
