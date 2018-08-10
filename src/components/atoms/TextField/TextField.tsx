@@ -8,7 +8,7 @@ interface IProps {
   name: string;
   label: string;
   placeholder?: string;
-  error?: string;
+  error?: any;
   value?: string | number;
   type?: string;
   disabled?: boolean;
