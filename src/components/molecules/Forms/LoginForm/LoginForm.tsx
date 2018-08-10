@@ -117,7 +117,7 @@ const LoginForm: React.SFC = () => (
                     id="password"
                     type="password"
                     name="password"
-                    label="password"
+                    label="Password"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.password}
