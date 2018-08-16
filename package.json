@@ -9,7 +9,8 @@
     "test:coverage": "yarn test -- --coverage",
     "serve": "serve -s build",
     "precommit": "pretty-quick --staged",
-    "docz:dev": "docz dev"
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.2.7",
