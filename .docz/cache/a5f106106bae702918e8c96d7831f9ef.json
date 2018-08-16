@@ -1,0 +1,49 @@
+{
+  "remainingRequest": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-hot-loader/babel.js\"],\"cacheDirectory\":true,\"babelrc\":false}!/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/mdapper/Sites/bookself/bookself-webapp/src/utils/DoczWrapper.tsx",
+  "dependencies": [
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/src/utils/DoczWrapper.tsx",
+      "mtime": 1534454072731
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "var _jsxFileName = \"/Users/mdapper/Sites/bookself/bookself-webapp/src/utils/DoczWrapper.tsx\";\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nimport React from 'react';\nimport { ThemeProvider } from 'styled-components';\n\nvar Wrapper = function Wrapper(_ref) {\n  var children = _ref.children;\n  return React.createElement(ThemeProvider, {\n    theme: {\n      mode: 'dark'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 5\n    },\n    __self: this\n  }, children);\n};\n\nvar _default = Wrapper;\nexport default _default;\n\ntry {\n  // @ts-ignore\n  DoczWrapper.displayName = \"DoczWrapper\"; // @ts-ignore\n\n  DoczWrapper.__docgenInfo = {\n    \"description\": \"\",\n    \"displayName\": \"DoczWrapper\",\n    \"props\": {}\n  }; // @ts-ignore\n\n  if (typeof STORYBOOK_REACT_CLASSES !== \"undefined\") // @ts-ignore\n    STORYBOOK_REACT_CLASSES[\"src/utils/DoczWrapper.tsx#DoczWrapper\"] = {\n      docgenInfo: DoczWrapper.__docgenInfo,\n      name: \"DoczWrapper\",\n      path: \"src/utils/DoczWrapper.tsx#DoczWrapper\"\n    };\n} catch (__react_docgen_typescript_loader_error) {}\n\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(Wrapper, \"Wrapper\", \"/Users/mdapper/Sites/bookself/bookself-webapp/src/utils/DoczWrapper.tsx\");\n  reactHotLoader.register(_default, \"default\", \"/Users/mdapper/Sites/bookself/bookself-webapp/src/utils/DoczWrapper.tsx\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/utils/DoczWrapper.tsx"],
+      "names": [
+        "React",
+        "ThemeProvider",
+        "Wrapper",
+        "children",
+        "mode",
+        "DoczWrapper",
+        "displayName",
+        "__docgenInfo",
+        "STORYBOOK_REACT_CLASSES",
+        "docgenInfo",
+        "name",
+        "path",
+        "__react_docgen_typescript_loader_error"
+      ],
+      "mappings": ";;;;;;;;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,SAASC,aAAT,QAA8B,mBAA9B;;AAEA,IAAMC,OAAO,GAAG,SAAVA,OAAU;AAAA,MAAGC,QAAH,QAAGA,QAAH;AAAA,SACd,oBAAC,aAAD;AAAe,IAAA,KAAK,EAAE;AAAEC,MAAAA,IAAI,EAAE;AAAR,KAAtB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KAAyCD,QAAzC,CADc;AAAA,CAAhB;;eAIeD,O;AAAf;;AACA,IAAI;AACA;AACAG,EAAAA,WAAW,CAACC,WAAZ,GAA0B,aAA1B,CAFA,CAGA;;AACAD,EAAAA,WAAW,CAACE,YAAZ,GAA2B;AAAE,mBAAe,EAAjB;AAAqB,mBAAe,aAApC;AAAmD,aAAS;AAA5D,GAA3B,CAJA,CAKA;;AACA,MAAI,OAAOC,uBAAP,KAAmC,WAAvC,EACI;AACAA,IAAAA,uBAAuB,CAAC,uCAAD,CAAvB,GAAmE;AAAEC,MAAAA,UAAU,EAAEJ,WAAW,CAACE,YAA1B;AAAwCG,MAAAA,IAAI,EAAE,aAA9C;AAA6DC,MAAAA,IAAI,EAAE;AAAnE,KAAnE;AACP,CATD,CAUA,OAAOC,sCAAP,EAA+C,CAAG;;;;;;;;;;;;;0BAf5CV,O",
+      "sourceRoot": "/Users/mdapper/Sites/bookself/bookself-webapp",
+      "sourcesContent": [
+        "import React from 'react';\nimport { ThemeProvider } from 'styled-components';\n\nconst Wrapper = ({ children }) => (\n  <ThemeProvider theme={{ mode: 'dark' }}>{children}</ThemeProvider>\n);\n\nexport default Wrapper;\ntry {\n    // @ts-ignore\n    DoczWrapper.displayName = \"DoczWrapper\";\n    // @ts-ignore\n    DoczWrapper.__docgenInfo = { \"description\": \"\", \"displayName\": \"DoczWrapper\", \"props\": {} };\n    // @ts-ignore\n    if (typeof STORYBOOK_REACT_CLASSES !== \"undefined\")\n        // @ts-ignore\n        STORYBOOK_REACT_CLASSES[\"src/utils/DoczWrapper.tsx#DoczWrapper\"] = { docgenInfo: DoczWrapper.__docgenInfo, name: \"DoczWrapper\", path: \"src/utils/DoczWrapper.tsx#DoczWrapper\" };\n}\ncatch (__react_docgen_typescript_loader_error) { }"
+      ]
+    }
+  ]
+}

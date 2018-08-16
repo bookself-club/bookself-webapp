@@ -1,0 +1,49 @@
+{
+  "remainingRequest": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-hot-loader/babel.js\"],\"cacheDirectory\":true,\"babelrc\":false}!/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/fonts.ts",
+  "dependencies": [
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/fonts.ts",
+      "mtime": 1533682362929
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nvar fonts = {\n  weight: {\n    light: 300,\n    regular: 400,\n    medium: 500,\n    semiBold: 600,\n    bold: 700\n  },\n  size: {\n    xsmall: '12px',\n    small: '14px',\n    regular: '16px',\n    large: '18px',\n    xlarge: '22px',\n    xxlarge: '48px'\n  }\n};\nvar _default = fonts;\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(fonts, \"fonts\", \"/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/fonts.ts\");\n  reactHotLoader.register(_default, \"default\", \"/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/fonts.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/tokens/fonts.ts"],
+      "names": [
+        "fonts",
+        "weight",
+        "light",
+        "regular",
+        "medium",
+        "semiBold",
+        "bold",
+        "size",
+        "xsmall",
+        "small",
+        "large",
+        "xlarge",
+        "xxlarge"
+      ],
+      "mappings": ";;;;;;AAAA,IAAMA,KAAK,GAAG;AACZC,EAAAA,MAAM,EAAE;AACNC,IAAAA,KAAK,EAAE,GADD;AAENC,IAAAA,OAAO,EAAE,GAFH;AAGNC,IAAAA,MAAM,EAAE,GAHF;AAINC,IAAAA,QAAQ,EAAE,GAJJ;AAKNC,IAAAA,IAAI,EAAE;AALA,GADI;AAQZC,EAAAA,IAAI,EAAE;AACJC,IAAAA,MAAM,EAAE,MADJ;AAEJC,IAAAA,KAAK,EAAE,MAFH;AAGJN,IAAAA,OAAO,EAAE,MAHL;AAIJO,IAAAA,KAAK,EAAE,MAJH;AAKJC,IAAAA,MAAM,EAAE,MALJ;AAMJC,IAAAA,OAAO,EAAE;AANL;AARM,CAAd;eAkBeZ,K;AAAf;;;;;;;;;;;;0BAlBMA,K",
+      "sourceRoot": "/Users/mdapper/Sites/bookself/bookself-webapp",
+      "sourcesContent": [
+        "const fonts = {\n  weight: {\n    light: 300,\n    regular: 400,\n    medium: 500,\n    semiBold: 600,\n    bold: 700,\n  },\n  size: {\n    xsmall: '12px',\n    small: '14px',\n    regular: '16px',\n    large: '18px',\n    xlarge: '22px',\n    xxlarge: '48px',\n  },\n};\n\nexport default fonts;\n"
+      ]
+    }
+  ]
+}

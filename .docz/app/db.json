@@ -1,0 +1,39 @@
+{
+  "config": {
+    "title": "Bookself Webapp",
+    "description": "My awesome app using docz",
+    "themeConfig": {},
+    "ordering": "descending",
+    "version": "0.1.0",
+    "repository": null,
+    "typescript": true,
+    "protocol": "http",
+    "propsParser": true,
+    "port": "6060",
+    "wrapper": "src/utils/DoczWrapper"
+  },
+  "entries": {
+    "src/components/atoms/Button/README.mdx": {
+      "name": "Button",
+      "id": "8d5db48121c3bfb5eb5b8cea28ef11d6",
+      "filepath": "src/components/atoms/Button/README.mdx",
+      "link": null,
+      "slug": "src-components-atoms-button-readme",
+      "route": "/src-components-atoms-button-readme",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "basic-usage",
+          "value": "Basic usage"
+        }
+      ]
+    }
+  }
+}

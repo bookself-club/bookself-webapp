@@ -1,18 +1,23 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 
-import { colors, misc } from 'components/tokens';
+import { colors, misc } from '../../../components/tokens';
 
 type colorType = 'primary' | 'secondary' | 'error';
 type sizeType = 'small' | 'medium' | 'large';
 
 interface IProps {
-  /** The label of the button */
+  /**
+   * Set this to change the label
+   */
   label: string;
 
-  /** The color of the button, defaults to 'primary' */
-  color?: colorType;
+  /**
+   * Set this to change the color
+   * @default primary
+   */
+  color: colorType;
 
   /** Disables the button, changing the visual style and make it unable to be pressed */
   disabled?: boolean;

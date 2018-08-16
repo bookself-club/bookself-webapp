@@ -1,0 +1,42 @@
+{
+  "remainingRequest": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-hot-loader/babel.js\"],\"cacheDirectory\":true,\"babelrc\":false}!/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/misc.ts",
+  "dependencies": [
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/misc.ts",
+      "mtime": 1533648339190
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nvar misc = {\n  radius: '4px',\n  lineHeight: 1.6,\n  animationDuration: {\n    fast: '400ms',\n    slow: '600ms'\n  }\n};\nvar _default = misc;\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(misc, \"misc\", \"/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/misc.ts\");\n  reactHotLoader.register(_default, \"default\", \"/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/misc.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/tokens/misc.ts"],
+      "names": [
+        "misc",
+        "radius",
+        "lineHeight",
+        "animationDuration",
+        "fast",
+        "slow"
+      ],
+      "mappings": ";;;;;;AAAA,IAAMA,IAAI,GAAG;AACXC,EAAAA,MAAM,EAAE,KADG;AAEXC,EAAAA,UAAU,EAAE,GAFD;AAGXC,EAAAA,iBAAiB,EAAE;AACjBC,IAAAA,IAAI,EAAE,OADW;AAEjBC,IAAAA,IAAI,EAAE;AAFW;AAHR,CAAb;eASeL,I;AAAf;;;;;;;;;;;;0BATMA,I",
+      "sourceRoot": "/Users/mdapper/Sites/bookself/bookself-webapp",
+      "sourcesContent": [
+        "const misc = {\n  radius: '4px',\n  lineHeight: 1.6,\n  animationDuration: {\n    fast: '400ms',\n    slow: '600ms',\n  },\n};\n\nexport default misc;\n"
+      ]
+    }
+  ]
+}

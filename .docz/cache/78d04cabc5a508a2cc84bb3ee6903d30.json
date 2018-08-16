@@ -1,0 +1,35 @@
+{
+  "remainingRequest": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-hot-loader/babel.js\"],\"cacheDirectory\":true,\"babelrc\":false}!/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/index.ts",
+  "dependencies": [
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/src/components/tokens/index.ts",
+      "mtime": 1533648339189
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/mdapper/Sites/bookself/bookself-webapp/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "import { colors } from './colors';\nimport fonts from './fonts';\nimport misc from './misc';\nexport { colors, fonts, misc };",
+    {
+      "version": 3,
+      "sources": ["src/components/tokens/index.ts"],
+      "names": ["colors", "fonts", "misc"],
+      "mappings": "AAAA,SAASA,MAAT,QAAuB,UAAvB;AACA,OAAOC,KAAP,MAAkB,SAAlB;AACA,OAAOC,IAAP,MAAiB,QAAjB;AAEA,SAASF,MAAT,EAAiBC,KAAjB,EAAwBC,IAAxB",
+      "sourceRoot": "/Users/mdapper/Sites/bookself/bookself-webapp",
+      "sourcesContent": [
+        "import { colors } from './colors';\nimport fonts from './fonts';\nimport misc from './misc';\n\nexport { colors, fonts, misc };\n"
+      ]
+    }
+  ]
+}
