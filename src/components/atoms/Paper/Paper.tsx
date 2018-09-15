@@ -6,11 +6,12 @@ import { colors, misc } from 'components/tokens';
 interface Props {
   width?: string;
 }
-const Card: React.SFC<Props> = ({ children, width = '100%' }) => (
-  <CardWrapper width={width}>{children}</CardWrapper>
+
+const Paper: React.SFC<Props> = ({ children, width = '100%' }) => (
+  <PaperWrapper width={width}>{children}</PaperWrapper>
 );
 
-const CardWrapper = styled.div`
+const PaperWrapper = styled.div`
   background-color: ${colors.fill.grayDark};
   width: ${(props: Props) => `${props.width}`};
   padding: 40px;
@@ -18,4 +19,4 @@ const CardWrapper = styled.div`
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 `;
 
-export default Card;
+export default Paper;
