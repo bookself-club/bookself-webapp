@@ -1,6 +1,6 @@
 import decode from 'jwt-decode';
 
-interface IDecoded {
+interface Decoded {
   exp: number;
   role: string;
 }
@@ -10,7 +10,7 @@ export function decodeToken(token: string) {
 }
 
 export function getTokenExpirationDate(token: string) {
-  const decoded: IDecoded = decode(token);
+  const decoded: Decoded = decode(token);
   if (!decoded.exp) {
     return null;
   }

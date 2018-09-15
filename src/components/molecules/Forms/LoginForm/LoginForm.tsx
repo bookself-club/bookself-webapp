@@ -19,20 +19,20 @@ const LOGIN = gql`
   }
 `;
 
-interface IData {
+interface Data {
   login: {
     token: string;
   };
 }
 
-interface IVariables {
+interface Variables {
   email: string;
   password: string;
 }
 
-class LoginMutation extends Mutation<IData, IVariables> {}
+class LoginMutation extends Mutation<Data, Variables> {}
 
-interface IMyFormValues {
+interface MyFormValues {
   email: string;
   password: string;
   apiError: string;
@@ -58,11 +58,11 @@ const LoginForm: React.SFC = () => (
                 password: yup.string().required(),
               })}
               onSubmit={(
-                { email, password }: IMyFormValues,
-                { setSubmitting, setErrors }: FormikActions<IMyFormValues>
+                { email, password }: MyFormValues,
+                { setSubmitting, setErrors }: FormikActions<MyFormValues>
               ) => {
                 login({ variables: { email, password } })
-                  .then(({ data }: { data: IData }) => {
+                  .then(({ data }: { data: Data }) => {
                     const { token } = data.login;
                     AuthService.finishAuthentication(token);
                     setSubmitting(false);
@@ -87,7 +87,7 @@ const LoginForm: React.SFC = () => (
                 handleChange,
                 handleBlur,
                 isSubmitting,
-              }: FormikProps<IMyFormValues>) => (
+              }: FormikProps<MyFormValues>) => (
                 <Form>
                   {errors.apiError && <div>{errors.apiError}</div>}
 
