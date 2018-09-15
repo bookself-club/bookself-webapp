@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik, Form, FormikProps, FormikActions } from 'formik';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import { Route, Link } from 'react-router-dom';
@@ -59,7 +59,7 @@ const LoginForm: React.SFC = () => (
               })}
               onSubmit={(
                 { email, password }: IMyFormValues,
-                { setSubmitting, setErrors }
+                { setSubmitting, setErrors }: FormikActions<IMyFormValues>
               ) => {
                 login({ variables: { email, password } })
                   .then(({ data }: { data: IData }) => {
@@ -87,7 +87,7 @@ const LoginForm: React.SFC = () => (
                 handleChange,
                 handleBlur,
                 isSubmitting,
-              }) => (
+              }: FormikProps<IMyFormValues>) => (
                 <Form>
                   {errors.apiError && <div>{errors.apiError}</div>}
 

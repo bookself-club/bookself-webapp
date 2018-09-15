@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 import { colors, fonts, misc } from 'components/tokens';
 
-interface IProps {
+interface Props {
   id: string;
   name: string;
   label: string;
@@ -16,13 +16,13 @@ interface IProps {
   onChange(event: React.FormEvent<HTMLInputElement>): void;
 }
 
-interface IStyledProps {
+interface StyledProps {
   value?: string | number;
   error?: string;
   disabled?: boolean;
 }
 
-const TextField: React.SFC<IProps> = ({
+const TextField: React.SFC<Props> = ({
   id,
   label,
   placeholder,
@@ -68,9 +68,9 @@ const Label = styled.label`
   margin-bottom: 8px;
 `;
 
-const StyledInput = styled.input`
+const StyledInput = styled.input<StyledProps>`
   background: none;
-  background-color: ${(props: IStyledProps) =>
+  background-color: ${props =>
     props.disabled ? colors.fill.grayLight : colors.fill.grayMedium};
   color: ${colors.text.white};
   font-size: ${fonts.size.small};
@@ -79,8 +79,7 @@ const StyledInput = styled.input`
   width: 100%;
   border-radius: ${misc.radius};
   border: 1px solid ${colors.fill.grayDarker};
-  cursor: ${(props: IStyledProps) =>
-    props.disabled ? 'not-allowed' : 'pointer'};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   font-weight: ${fonts.weight.regular};
   height: 44px;
 
@@ -95,7 +94,7 @@ const StyledInput = styled.input`
     border-color: ${colors.fill.blue};
   }
 
-  ${(props: IStyledProps) => {
+  ${props => {
     if (props.error) {
       return css`
         color: ${colors.text.red};
@@ -111,12 +110,12 @@ const ErrorWrapper = styled.div`
   min-height: 20px;
 `;
 
-const ErroLabel = styled.div`
+const ErroLabel = styled.div<StyledProps>`
   font-size: ${fonts.size.xsmall};
   font-weight: ${fonts.weight.semiBold};
   padding: 0 8px;
 
-  ${(props: IStyledProps) => {
+  ${props => {
     if (props.error) {
       return css`
         color: ${colors.text.red};

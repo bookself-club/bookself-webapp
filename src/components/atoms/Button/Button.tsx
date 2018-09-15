@@ -4,10 +4,7 @@ import theme from 'styled-theming';
 
 import { colors, misc } from '../../../components/tokens';
 
-type colorType = 'primary' | 'secondary' | 'error';
-type sizeType = 'small' | 'medium' | 'large';
-
-interface IProps {
+interface Props {
   /**
    * Set this to change the label
    */
@@ -15,40 +12,51 @@ interface IProps {
 
   /**
    * Set this to change the color
-   * @default primary
    */
-  color: colorType;
+  color: 'primary' | 'secondary' | 'error';
 
-  /** Disables the button, changing the visual style and make it unable to be pressed */
+  /**
+   * Disables the button, changing the visual style and make it unable to be pressed
+   * @default false
+   */
   disabled?: boolean;
 
-  /** The size of the button, defaults to 'medium' */
-  size?: sizeType;
+  /**
+   * The size of the button
+   * @default medium
+   */
+  size?: 'small' | 'medium' | 'large';
 
-  /** Type of the button, defaults to 'button' */
+  /**
+   * The type of the button
+   * @default button
+   */
   type?: 'submit' | 'button';
 
-  /** Loading state when waiting for an action to complete */
+  /**
+   * Loading state when waiting for an action to complete
+   * @default false
+   */
   loading?: boolean;
 
   /** Function to handle button click */
   onClick?(e: React.MouseEvent<HTMLElement>): void;
 }
 
-interface IStyledProps {
-  color: colorType;
-  size: sizeType;
+interface StyledProps {
+  color: 'primary' | 'secondary' | 'error';
+  size: 'small' | 'medium' | 'large';
   loading: boolean;
   disabled: boolean;
 }
 
-const Button: React.SFC<IProps> = ({
+const Button: React.SFC<Props> = ({
   label,
   disabled = false,
   type = 'button',
   loading = false,
   onClick,
-  color = 'primary',
+  color,
   size = 'medium',
 }) => (
   <ButtonStyled
@@ -125,7 +133,7 @@ const textColor = theme.variants('mode', 'color', {
   },
 });
 
-const ButtonStyled = styled.button<IStyledProps>`
+const ButtonStyled = styled.button<StyledProps>`
   background-color: ${backgroundColor};
   border-radius: ${misc.radius};
   border: 1px solid ${backgroundColor};
@@ -140,9 +148,8 @@ const ButtonStyled = styled.button<IStyledProps>`
   min-width: 140px;
   padding: 0 16px;
   position: relative;
-  opacity: ${(props: IStyledProps) => (props.disabled ? 0.6 : 1)};
-  cursor: ${(props: IStyledProps) =>
-    props.disabled ? 'not-allowed' : 'pointer'};
+  opacity: ${props => (props.disabled ? 0.6 : 1)};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   transition: border-color ${misc.animationDuration.slow} ease,
     background-color ${misc.animationDuration.slow} ease,
     color ${misc.animationDuration.slow} ease;

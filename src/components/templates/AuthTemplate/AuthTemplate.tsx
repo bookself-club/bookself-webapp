@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 import Card from 'components/atoms/Card';
 
-interface IProps {
+interface Props {
   title: string;
 }
 
-const HomeTemplate: React.SFC<IProps> = ({ children, title }) => (
+const HomeTemplate: React.SFC<Props> = ({ children, title }) => (
   <div>
     <Helmet title={title} />
     <Wrapper>

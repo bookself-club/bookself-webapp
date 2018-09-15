@@ -3,13 +3,13 @@ import { Route, Redirect, RouteComponentProps } from 'react-router-dom';
 
 import AuthService from 'utils/AuthService';
 
-interface IProps {
+interface Props {
   component: React.SFC<RouteComponentProps<{}>> | React.ComponentClass;
   exact?: boolean;
   path?: string;
 }
 
-const PrivateRoute: React.SFC<IProps> = ({ component: Component, ...rest }) => (
+const PrivateRoute: React.SFC<Props> = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={props =>

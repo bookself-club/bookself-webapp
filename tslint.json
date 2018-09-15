@@ -1,6 +1,7 @@
 {
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
+    "include": ["src/*", "src/**/*"],
     "exclude": [
       "config/**/*.js",
       "node_modules/**/*.ts",
@@ -10,6 +11,7 @@
   "rules": {
     "jsx-no-lambda": false,
     "ordered-imports": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "interface-name": false
   }
 }
